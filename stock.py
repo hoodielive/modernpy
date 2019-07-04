@@ -11,5 +11,10 @@ class Stock(object):
         nshares -= self.shares
         return nshares
 
+    def read_portfolio(self, file):
+        file = open('./data/portfolio.csv', 'rt')
+        for s in file:
+            print('%10s %10d %10.2f' % (s.name, s.shares, s.price)
+
 s = Stock('Google', 100, 490.10)
-print(s.sell(25))
+s.read_portfolio('./data/portfolio.csv')
