@@ -44,5 +44,5 @@ while must_check:
         if ns:
             must_check.append(ns)
     after = len(must_check)
-    if before == after and not all(s=='Eaten' for s in state[0]):
+    if before == after and not all(s == 'Eaten' for s in state[0]):
         print("DeadLock in state", state)
