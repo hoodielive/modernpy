@@ -93,6 +93,7 @@ assert OR(TRUE)(FALSE)
 assert OR(FALSE)(TRUE)
 assert OR(FALSE)(FALSE)
 
+ZERO =
 ONE = lambda f: lambda x: f(x)
 TWO = lambda f: lambda x: f(f(x))
 THREE = lambda f: lambda x: f(f(f(x)))
