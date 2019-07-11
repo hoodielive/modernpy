@@ -120,3 +120,20 @@ a(incr)(0)
 def SUCC(n):
     def NEXTNUM(f):
         return lambda x: f(n(f)(x))
+    return NEXTNUM
+
+# Implement Add.
+def ADD(x):
+    return lambda y: y(SUCC)(x)
+
+a(incr)(0)
+
+def MUL(x):
+    return lambda b: lambda f: lambda x: a(b(f))(x)
+
+# pow
+a = MUL(THREE)(FOUR)
+a(incr)(0)
+
+def POW(x):
+    return lambda y: y(x)
