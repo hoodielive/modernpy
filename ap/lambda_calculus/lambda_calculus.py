@@ -95,11 +95,18 @@ assert OR(FALSE)(FALSE)
 
 ONE = lambda f: lambda x: f(x)
 TWO = lambda f: lambda x: f(f(x))
-THIRD = lambda f: lambda x: f(f(f(x)))
+THREE = lambda f: lambda x: f(f(f(x)))
 
 def incr(x):
     return x + 1 # Illegal.
 
+# just for shits and giggles and shit.
 incr(0)
 incr(incr(0)) 
 incr(incr(incr(0)))
+
+def p(t):
+    return (t[0]+1, t[0])
+
+p((0,0)) 
+THREE(p)((0,0))
