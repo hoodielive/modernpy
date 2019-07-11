@@ -7,8 +7,6 @@ def FALSE(a):
 
 def PAIR(a):
     return lambda b:  lambda z: z(lambda: a)(lambda: b)   # Patch
-	
-	
+
 def FACTORIAL(n):
     return ISZERO(n)(lambda: ONE)(lambda: MUL(n)(FACTORIAL(PRED(n))))
-
