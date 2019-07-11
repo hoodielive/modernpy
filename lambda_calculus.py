@@ -54,10 +54,10 @@ def add(x): # Currying. Take multiple args and turn them into single functions.
     return f
 
 def TRUE(x):
-    return lambda y: x
+    return lambda y: x()
 
 def FALSE(x):
-    return lambda y: y
+    return lambda y: y()
 
 TRUE('5v')('gnd')
 FALSE('5v')('gnd')
@@ -93,7 +93,9 @@ assert OR(TRUE)(FALSE)
 assert OR(FALSE)(TRUE)
 assert OR(FALSE)(FALSE)
 
-ZERO = lambda x: x
+def ZERO(x):
+    return lambda x: x
+
 ONE = lambda f: lambda x: f(x)
 TWO = lambda f: lambda x: f(f(x))
 THREE = lambda f: lambda x: f(f(f(x)))
@@ -137,3 +139,38 @@ a(incr)(0)
 
 def POW(x):
     return lambda y: y(x)
+
+# Data Structures
+
+def PAIR(a):
+    return lambda b: lambda z: z(lambda:a)(lambda: b)
+
+a(TRUE)
+a(FALSE)
+
+def LEFT(p):
+    return p(TRUE)
+
+def RIGHT(p):
+    return p(FALSE)
+
+def P(t):
+    return PAIR(SUCC(LEFT(t)))(LEFT(t))
+
+def PRED(n):
+    return RIGHT(n(P))(PAIR(ZERO)(ZERO))
+
+def SUB(a):
+    return lambda b: b(PRED)(a)
+
+def ISZERO(n):
+    return n(lambda x: FALSE)(TRUE)
+
+def factorial(n):
+    return 1 if n == 0 else n*factorial(n-1)
+
+def FACTORIAL(n):
+    return ISZERO(n)(lambda: ONE)(lambda: MUL(n)(FACTORIAL(PRED(n))))
+
+a = FACTORIAL(FIVE)
+print(a(incr)(0))
