@@ -96,6 +96,7 @@ assert OR(FALSE)(FALSE)
 ONE = lambda f: lambda x: f(x)
 TWO = lambda f: lambda x: f(f(x))
 THREE = lambda f: lambda x: f(f(f(x)))
+FOUR = lambda f: lambda x: f(f(f(f(x))))
 
 def incr(x):
     return x + 1 # Illegal.
@@ -110,3 +111,6 @@ def p(t):
 
 p((0,0)) 
 THREE(p)((0,0))
+
+a = FOUR(THREE)
+a(incr)(0)
