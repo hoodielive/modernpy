@@ -11,3 +11,5 @@ def binary_contains(gene: Gene, key_codon: Codon) -> bool:
             return True
     return False
 
+
+binary_contains('gene': True, 'key_codon': False)
