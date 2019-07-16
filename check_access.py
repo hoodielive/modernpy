@@ -3,8 +3,8 @@ xcaps = ['l', 'r', 'l', 'l', 'r', 'l', 'r']
 intervals = []
 
 def check_access(caps):
-    start = forward = backward = 0
     for x in range(1, len(caps)):
+    start = forward = backward = 0
         if caps[start] != caps[1]:
             intervals.append((start, x - 1, caps[start]))
         if caps[start] == '1':
