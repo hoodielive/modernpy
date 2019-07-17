@@ -15,10 +15,14 @@ def sumsquares(nums):
 
 sumsquares(nums)
 
+items = filenames = []
 
-
-sum(x * x in nums)
 print(','.join(str(x) for x in items))
 
 if any(name.endswith('.py') for name in filenames):
     ...
+
+
+import sys
+a = '\x00'
+print(sys.getsizeof(a))
