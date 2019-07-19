@@ -23,3 +23,49 @@ m = map(ord, 'turtles all the way down')
 
 print(m)
 print(isinstance(m, map))
+
+
+# advanced comprehension(s)
+oldlist = [1,3,4]
+
+def somefunc(elem):
+    return elem
+
+new_list = [] 
+for elem in oldlist:
+    new_list.append(somefunc(elem))
+
+print(new_list)
+
+print(somefunc(new_list))
+
+newlist = [somefunc(elem) for elem in oldlist]
+
+print(newlist)
+
+zlist = [] 
+xlist = [1,2,3, 'a']
+ylist = [4,5,6, 'b']
+
+def func(a, b):
+    return (a, b) 
+
+for x in xlist:
+    for y in ylist: 
+        zlist.append(func(x,y))
+
+new_zlist = [func(x, y) for x in xlist for y in ylist]
+
+print(new_zlist)
+
+zlist = [] 
+
+def cond(x, y):
+    return (x, y)
+
+def f(a, b):
+    return (a, b)
+
+new_zlist = [f(x, y) for x in xlist for y in ylist if cond(x, y)]
+
+print(new_zlist)
