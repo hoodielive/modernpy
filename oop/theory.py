@@ -1,7 +1,14 @@
 class Car: 
-    def func(self):
-        print("Car created")
+    def start(self):
+        print("Car started!")
 
+    def reverse(self): 
+        print("Car taking a reverse")
 
-car1 = Car()
-car1.func()
+def main():
+    volvo = Car()
+    volvo.start() 
+    volvo.reverse() 
+
+if __name__ == "__main__":
+    main()
