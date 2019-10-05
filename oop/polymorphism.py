@@ -8,6 +8,6 @@ class Man:
         else:
             print("Hi!")
         
-
 obj = Man() 
 obj.sayHi("Larry")
+
