@@ -11,6 +11,6 @@ class Car:
 
 
 new_car = Car() 
-    print(new_car.car_type)
-    print(new_car.model)
-    print(new_car.mileage)
+print(new_car.car_type)
+print(new_car.model)
+print(new_car.mileage)
