@@ -6,9 +6,16 @@ def repos_with_most_stars():
     parameters = {"q": "stars:>5000"}
     response = requests.get(gh_api_repo_search_url, params=parameters) 
 
-    response_json = response.json()
+    response_json = response.json()['items']
 
-    print(response_json.keys())
+    return response_json
 
 if __name__ == "__main__":
-    repos_with_most_stars()
+    results = repos_with_most_stars()
+    print(len(results))
+    for result in results:
+        language = result['language']
+        stars = result['stargazers_count']
+        name = result['name']
+
+        print(f"-> {name} is a repository of {language} with this number of stars {stars}")
