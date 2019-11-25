@@ -9,7 +9,6 @@ class Car:
     def reverse(self): 
         print("Car taking a reverse")
 
-
 new_car = Car() 
 print(new_car.car_type)
 print(new_car.model)
