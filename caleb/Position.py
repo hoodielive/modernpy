@@ -9,7 +9,6 @@ class Position():
     def log(self):
         print(self.pan, self.tilt, self.zoom)
 
-
 class Camera:
     def __init__(self, serial_number, position, camera_type):
         self.serial_number = serial_number
