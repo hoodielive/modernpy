@@ -26,12 +26,6 @@ class Stack:
 
 def example():
     # Compute 2 + 3 * 0.1 
-    code = [
-        ('const', 2),
-        ('const', 3),
-        ('const', 0.1),
-        ('mul',),
-        ('add',),
-    ]
+    code = [ ('const', 2), ('const', 3), ('const', 0.1), ('mul',), ('add',) ] 
 
     m = Stack()
