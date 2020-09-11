@@ -1,7 +1,4 @@
-
-
 author = "profile"
-
 count = 0
 callable(author)
 
