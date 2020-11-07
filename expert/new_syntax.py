@@ -32,16 +32,15 @@ s_a = ','.join(['some', 'comma', 'separated', 'values'])
 
 print(s_a)
 
-#use_string_format = "Some string with included % value" % "other"
-
-#alt_string_format = "Some string with included { other } value".format(other="other")
-
-#print(use_string_format)
-#print(alt_string_format)
 
 def conquer():
     from sys import version_info
     altty = "This is Python {}.{}".format(*version_info)
+    #use_string_format = 'Some string with included % value' % 'other'
+    #alt_string_format = 'Some string with included { other } value'.format(other='other')
     return altty
 
 print(conquer())
+
+
+
