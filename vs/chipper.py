@@ -9,3 +9,13 @@ print(len(student_tuple))
 student_tuple = "hang", "in", "the", "balance"
 
 print(len(student_tuple))
+
+tuple1 = (10, 20, 30)
+
+tuple1 += (40, 50)
+
+print(tuple1)
+
+tuple1 += (60, 70)
+
+print(tuple1)
