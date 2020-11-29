@@ -1,4 +1,7 @@
 student_tuple = ()
+student_tuple += ('Vince', 'Jordan')
+
+print(student_tuple)
 
 time_tuple = (9, 16, 1)
 
