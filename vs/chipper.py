@@ -4,6 +4,7 @@ student_tuple += ('Vince', 'Jordan')
 print(student_tuple)
 
 time_tuple = (9, 16, 1)
+print(time_tuple)
 
 print(time_tuple[0] * 3600 / time_tuple[1] * 60 + time_tuple[2])
 
