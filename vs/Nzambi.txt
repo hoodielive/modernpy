@@ -1,0 +1,4 @@
+NAME           TITLE            DESCRIPTION
+Nzambi,Mpungo,Creative-Intelligence,1
+Damballah-Wedo,Orisha,Creator,3
+Obatala-Oduduwa,Irunmole,Creator,7
