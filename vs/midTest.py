@@ -36,6 +36,16 @@ class BaseClassy:
 # Duck typing is ducking the specification of a type. 
 
 # Write 4 try and except statements on Syntax Error, Value Error, Type Error, Attribute Error
+def someErrorMessage():
+    return "I'm a nasty error."
+try:
+    someInput = input("Please just strike the enter key.")
+    if someInput == "":
+        raise ValueError("Howdy, I'm a value error.")
+except ValueError:
+    someErrorMessage()
+finally:
+    print("Thats all for now folks.")
 
 # Write 5 functions depicting and returning *args and **kwargs 
 def depictionOne(*args, **kwargs):
