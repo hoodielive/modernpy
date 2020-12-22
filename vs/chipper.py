@@ -1,10 +1,14 @@
 student_tuple = ()
+print(id(student_tuple))
 
 student_tuple += ('Vince', 'Jordan')
+print(id(student_tuple))
 
 student_tuple += ('Basically', 'Complexity')
+print(id(student_tuple))
 
 print(student_tuple)
+
 
 time_tuple = (9, 16, 1)
 
