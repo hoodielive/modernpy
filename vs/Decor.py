@@ -10,3 +10,13 @@ def identify(f):
 @identity
 def foo():
     return 'bar'
+
+foo = identity(foo)
+
+# A useless decorator that does nothing:
+
+_functions = {}
+def register(f):
+    global _functions
+    _functions[f.__name__] = f
+    return f
