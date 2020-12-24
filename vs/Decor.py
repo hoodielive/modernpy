@@ -31,6 +31,17 @@ def check_is_admin(username):
         return f(*args, **kwargs)
     return wrapper
 
+def is_admin(f):
+    def wrapper(*args, **kwargs):
+        if kwargs.get('username') != 'admin':
+            raise Exception("I said this user is not allowed to eat.")
+        return f(*args, **kwargs)
+    return wrapper
+
+def foobar(username="Someone"):
+    """Do some crazy shii""" 
+    pass
+
 class Store(object):
     def __init__(self, storage):
         self._storage = storage
@@ -49,3 +60,5 @@ print(user01.get_food('Oya', 'pizza'))
 
 # If you stare into an abyss, it too will stare into you. 
 
+print(foobar.func_doc)
+print(foobar.__name__)
