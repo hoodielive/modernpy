@@ -61,8 +61,6 @@ print(user01.get_food('Oya', 'pizza'))
 
 # If you stare into an abyss, it too will stare into you. 
 
-print(foobar.__doc__)
-print(foobar.__name__)
 
 # Um.. okay. 
 from functools import update_wrapper
@@ -90,3 +88,8 @@ def update_wrapper(
         getattr(wrapper, attr).update(getattr(wrapped, attr, {}))
         # Return the wrapper so this can be used as a decorator via partial()
         return wrapper
+
+foobar = functools.update_wrapper(is_admin, foobar)
+
+print(foobar.__doc__)
+print(foobar.__name__)
