@@ -24,19 +24,23 @@ def register(f):
 @register 
 def foo(): return 'bar'
 
+def check_is_admin(username):
+    if username != 'admin':
+        raise Exception("This user is not allowed to get food.")
+
 class Store(object):
     def __init__(self, storage):
         self._storage = storage
 
     def get_food(self, username, food):
-        if username != 'admin':
-            raise Exception("This user is not allowed get food.")
+        check_is_admin(username)
         return self._storage.get(food)
 
     def put_food(self, username, food):
-        if username != 'admin':
-            raise Exception("This user is not allowed to get food either.")
+        check_is_admin(username)
         self._storage.put(food)
+    
 
 user01 = Store('admin')
 print(user01.get_food('Satana', 'pizza'))
+
