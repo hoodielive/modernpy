@@ -7,11 +7,11 @@ def identify(f):
 # function as an argument and replaces it with a new
 # modified function.
 
-@identity
+@identify
 def foo():
     return 'bar'
 
-foo = identity(foo)
+foo = identify(foo)
 
 # A useless decorator that does nothing:
 
@@ -20,3 +20,6 @@ def register(f):
     global _functions
     _functions[f.__name__] = f
     return f
+
+@register 
+def foo(): return 'bar'
