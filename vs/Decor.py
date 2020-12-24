@@ -63,3 +63,30 @@ print(user01.get_food('Oya', 'pizza'))
 
 print(foobar.__doc__)
 print(foobar.__name__)
+
+# Um.. okay. 
+from functools import update_wrapper
+
+WRAPPER_ASSIGNMENTS = ('__module__', '__name__', '__qualname__', '__doc__', '__annotations__')
+WRAPPER_UPDATES = ('__dict__',)
+
+def update_wrapper(
+                    wrapper, 
+                    wrapped, 
+                    assigned=WRAPPER_ASSIGNMENTS, 
+                    updated=WRAPPER_UPDATES
+                  ):
+    wrapper.__wrapped__ = wrapped
+
+    for attr in assigned:
+        try:
+            value = getattr(wrapped, attr)
+        except AttributeError:
+            pass
+        else: 
+            setattr(wrapper, attr, value)
+    
+    for attr in updated:
+        getattr(wrapper, attr).update(getattr(wrapped, attr, {}))
+        # Return the wrapper so this can be used as a decorator via partial()
+        return wrapper
