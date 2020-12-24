@@ -3,7 +3,6 @@
 # function as an argument and replaces it with a new
 # modified function.
 
-
 def identify(f):
     return f
 
@@ -65,12 +64,9 @@ from functools import update_wrapper
 WRAPPER_ASSIGNMENTS = ('__module__', '__name__', '__qualname__', '__doc__', '__annotations__')
 WRAPPER_UPDATES = ('__dict__',)
 
-def update_wrapper(
-                    wrapper, 
-                    wrapped, 
+def update_wrapper(wrapper, wrapped, 
                     assigned=WRAPPER_ASSIGNMENTS, 
-                    updated=WRAPPER_UPDATES
-                  ):
+                    updated=WRAPPER_UPDATES):
     wrapper.__wrapped__ = wrapped
 
     for attr in assigned:
