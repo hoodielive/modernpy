@@ -1,18 +1,18 @@
 # Decorator lesson.
-
-def identify(f):
-    return f
-
 # So a decorator is a function that takes another
 # function as an argument and replaces it with a new
 # modified function.
+
+
+def identify(f):
+    return f
 
 @identify
 def foo():
     return 'bar'
 
 foo = identify(foo)
-
+print(foo())
 # A useless decorator that does nothing:
 
 _functions = {}
@@ -44,9 +44,6 @@ def foobar(username="Someone"):
     pass
 
 class Store(object):
-    def __init__(self, storage):
-        self._storage = storage
-
     @check_is_admin
     def get_food(self, username, food):
         return self._storage.get(food)
@@ -56,8 +53,8 @@ class Store(object):
         self._storage.put(food)
     
 
-user01 = Store('admin')
-print(user01.get_food('admin', 'pizza'))
+user01 = Store()
+print(user01.get_food(username='admin', food='pizza'))
 
 # If you stare into an abyss, it too will stare into you. 
 
