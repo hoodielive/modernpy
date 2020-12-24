@@ -38,6 +38,7 @@ def is_admin(f):
         return f(*args, **kwargs)
     return wrapper
 
+@is_admin
 def foobar(username="Someone"):
     """Do some crazy shii""" 
     pass
@@ -60,5 +61,5 @@ print(user01.get_food('Oya', 'pizza'))
 
 # If you stare into an abyss, it too will stare into you. 
 
-print(foobar.func_doc)
+print(foobar.__doc__)
 print(foobar.__name__)
