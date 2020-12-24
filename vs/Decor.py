@@ -56,8 +56,8 @@ class Store(object):
         self._storage.put(food)
     
 
-user01 = Store('Oya')
-print(user01.get_food('Oya', 'pizza'))
+user01 = Store('admin')
+print(user01.get_food('admin', 'pizza'))
 
 # If you stare into an abyss, it too will stare into you. 
 
