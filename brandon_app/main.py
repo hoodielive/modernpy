@@ -12,3 +12,7 @@ def aboutus():
 @app.route('/store')
 def ourStore():
     return 'Welcome to the Store.'
+
+@app.route('/vudu')
+def ourVudu():
+    return 'Welcome to the Vudu Consultation page.'
