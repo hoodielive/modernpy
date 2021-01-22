@@ -4,6 +4,7 @@ def first_func(val):
 
 new_name = first_func
 
+
 first_func("Spam!")
 print(new_name("Spam too!"))
 
@@ -29,3 +30,13 @@ math(mult, 4, 2)
 
 
 math(div, 4, 2)
+
+
+def person(name):
+    def greeting():
+        return "Would you like some spam, "
+    greet = greeting() + name + "?"
+   return greet
+
+
+print(person("Sir Galahad"))
