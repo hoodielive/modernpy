@@ -1,5 +1,5 @@
 import time
-import Thread
+from threading import Thread
 
 def do_work():
     print("Starting work..")
