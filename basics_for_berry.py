@@ -1,3 +1,4 @@
+# Perhaps one day we will come and revisit this.. 
 # Strings, characters.
 # Booleans, False or True.
 # Integers, numbers.
