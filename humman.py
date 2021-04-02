@@ -11,7 +11,7 @@ class Human:
     def sing(self):
         return 'yo... yo... microphone check... one two... one two...'
 
-    @clasmethod
+    @classmethod
     def get_species(cls):
         return cls.species
 
