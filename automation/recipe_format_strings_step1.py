@@ -20,3 +20,10 @@ TEMPLATE = '{revenue:>7,} | {profit:>+6} | {percent:>7.2%}'
 for revenue, profit in data:
     row = TEMPLATE.format(revenue=revenue, profit=profit, percent=profit / revenue)
     print(row)
+
+# Meta-Templates. Templates that produce templates.
+
+value = 'VALUE'
+print(f'This is the value, in the curly brackets {{{ value }}}')
+
+
