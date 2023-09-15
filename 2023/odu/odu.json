@@ -1,0 +1,28 @@
+{
+  "odus": [
+    {
+      "name": "EjiOgbe",
+      "orientation": "east",
+      "element": "fire",
+      "meaning": "An open road, alignment"
+    },
+    {
+      "name": "Oyeku Meji",
+      "orientation": "west",
+      "element": "water",
+      "meaning": "An the averter of death, the ending of cycles, death"
+    },
+    {
+      "name": "Iwori Meji",
+      "orientation": "north",
+      "element": "air",
+      "meaning": "Trapped in one's head, the character of iwa, fiery trials"
+    },
+    {
+      "name": "Idi Meji",
+      "orientation": "south",
+      "element": "earth",
+      "meaning": "Support from feminine energies, ancestral support"
+    }
+  ]
+}
