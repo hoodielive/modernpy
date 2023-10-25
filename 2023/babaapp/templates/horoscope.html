@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Astrology App</title>
+</head>
+<body>
+
+<form action="/horoscope" method="post">
+    <label for="sign">Enter your zodiac sign:</label>
+    <input type="text" id="sign" name="sign" required>
+    <button type="submit">Get Horoscope</button>
+</form>
+
+{% if horoscope %}
+    <h2>Your Horoscope:</h2>
+    <p>{{ horoscope }}</p>
+{% endif %}
+
+</body>
+</html>
+

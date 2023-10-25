@@ -55,7 +55,7 @@ def check_answer():
         result_label.config(text="Correct!", fg="green")
     else:
         wrong_answers += 1
-        result_label.config(text=f"Wrong. The correct word (Odu) is: {statement_word}", fg="red")
+        result_label.config(text=f"Wrong. The correct Odu is: {statement_word}", fg="red")
 
     next_statement()
 
