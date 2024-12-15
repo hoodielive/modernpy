@@ -1,5 +1,5 @@
 Babel==2.9.0
-certifi==2020.12.5
+certifi==2022.12.7
 chardet==3.0.4
 Delorean==1.0.0
 greenlet==1.0.0
