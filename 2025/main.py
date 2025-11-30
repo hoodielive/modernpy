@@ -1,6 +1,6 @@
-class employee: 
+class employee:
     __name = "" # an attribute
- 
+
     # constructor
     def __init__(self, name):
         self.__name = name
