@@ -1,4 +1,4 @@
-Babel==2.9.0
+Babel==2.9.1
 certifi==2020.12.5
 chardet==3.0.4
 Delorean==1.0.0
